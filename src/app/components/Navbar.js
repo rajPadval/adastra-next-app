@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link href="/" className="text-adastra-blue">Events</Link>
           <Link href="/" className="text-adastra-blue">Blogs</Link>
           <Link href="/" className="text-adastra-blue">About</Link>
-          <Link href="/" className="text-adastra-blue">Login</Link>
+          <Link href="/login" className="text-adastra-blue">Login</Link>
         </div>
       </div>
     </nav>
