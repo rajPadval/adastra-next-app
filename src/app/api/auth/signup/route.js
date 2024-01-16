@@ -11,7 +11,7 @@ export const POST = async (request) => {
   try {
     let user = await Register.findOne({ email });
 
-    if (!user) {
+    if (user) {
       return NextResponse.json({
         success: false,
         message: "User already exists",
