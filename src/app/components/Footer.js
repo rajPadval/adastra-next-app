@@ -8,7 +8,8 @@ const Footer = () => {
                 <h1 className='sm:my-auto sm:mx-auto m-8' id='Footer-Text-Logo'>AdAstra
                     <div class="roller">
                         <span id="rolltext">To the Stars ✨<br />
-                        Through Hardship 🚀<br />
+                        Through<br/>
+                         Hardship 🚀<br />
                         😊😊😊
                         </span>
                     </div>
