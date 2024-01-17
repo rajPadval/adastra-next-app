@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className='bg-blue w-[100vw] h-[20vh]'>
             <div className='flex justify-evenly flex-col sm:flex-row gap-y-6 text-center'>
-                <h1 className='my-auto mx-auto' id='Footer-Text-Logo'>AdAstra
+                <h1 className='sm:my-auto sm:mx-auto m-8' id='Footer-Text-Logo'>AdAstra
                     <div class="roller">
                         <span id="rolltext">To the Stars ✨<br />
                         Through Hardship 🚀<br />
@@ -21,13 +21,6 @@ const Footer = () => {
                         <li>Github</li>
                         <li>LinkedIn</li>
                     </div>
-                    {/* position: relative;
-    color: #fff;
-    font-size: 32px;
-    letter-spacing: .5em;
-    animation: glitch-skew 1s linear infinite alternate-reverse;
-    text-align: center;
-    text-transform: uppercase; */}
                 </div>
                 <div className='m-auto'>
                     <h2 className='sm:text-xl text-[1.5rem]'>Learn</h2>
