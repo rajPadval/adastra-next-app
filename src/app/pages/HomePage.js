@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -6,11 +7,13 @@ import Vision from "../components/homepageComponent/Vision";
 import Members from "../components/homepageComponent/Members";
 import Home_Blogs from "../components/homepageComponent/Home_Blogs";
 import Home_Events from "../components/homepageComponent/Home_Events";
+// import Hero from '../components/Hero';
 
 const HomePage = () => {
     return (
-        <div>
+        <div className='gap-6'>
             <Navbar />
+            {/* <Hero /> */}
             <Home_Events />
             <Home_Blogs />
             <Members />

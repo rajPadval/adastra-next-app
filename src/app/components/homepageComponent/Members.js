@@ -1,17 +1,72 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Members = () => {
   return (
-    <div className='flex justify-center'>
-        <div className='w-[70%] lg:flex flex justify-center lg:justify-center p-4 flex-col lg:flex-row'>
-            <div className=' w-[200px] h-[220px] lg:w-[200px] lg:w-[220px] bg-adastra-dark-blue border-[2px] border-adastra-light-blue rounded-[50%] m-2 mx-auto'></div>
-            <div className='lg:w-[50rem] w-[100%] sm:p-8 m-4 mx-auto text-center'>
-                <h1 className='text-[1.75rem]'>Raj Padval</h1>
-                <h2 className='text-[0.95rem]'>Technical Member</h2>
-                <span className='text-[0.75rem]'>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"</span>
+    <>
+      <div className="teamWrapper mt-10 mb-[5rem]">
+        <div className="container mx-auto">
+          <h1 className="text-center text-4xl font-bold">Our Team</h1>
+          <p className="text-center">Meet Our Hardworking Team</p>
+          <div className="grid grid-cols-3 gap-6 mt-16">
+            
+          <div className="column">
+              <div className="teamcol">
+                <div className="teamcolinner">
+                  <div className="avatar flex justify-center"><Image src="/event.jpg" width={200} height={50} alt="Member" /></div>
+                  <div className="member-name text-center mt-10 text-[1.75rem]"> <h2>Prathmesh Zingade</h2> </div>
+                  <div className="member-info text-center"><p>We all know that creative juices cannot flow endlessly</p></div>
+                  <div className="member-mail text-center"> <p><a href="mailto:@gmail.com">Main@gmil.com</a></p> </div>
+                  <div className="member-social flex justify-center items-center">
+                    <ul className="social-listing">
+                      <li><a href="#" className="fa fa-facebook"></a></li>
+                      <li><a href="#" className="fa fa-instagram"></a></li>
+                      <li><a href="#" className="fa fa-twitter"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div className="column">
+              <div className="teamcol">
+                <div className="teamcolinner">
+                  <div className="avatar flex justify-center"><Image src="/event.jpg" width={200} height={50} alt="Member" /></div>
+                  <div className="member-name text-center mt-10 text-[1.75rem]"> <h2>Aditya Waigankar</h2> </div>
+                  <div className="member-info text-center"><p>We all know that creative juices cannot flow endlessly</p></div>
+                  <div className="member-mail text-center"> <p><a href="mailto:@gmail.com">Main@gmil.com</a></p> </div>
+                  <div className="member-social flex justify-center items-center">
+                    <ul className="social-listing">
+                      <li><a href="#" className="fa fa-facebook"></a></li>
+                      <li><a href="#" className="fa fa-instagram"></a></li>
+                      <li><a href="#" className="fa fa-twitter"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="column">
+              <div className="teamcol">
+                <div className="teamcolinner">
+                  <div className="avatar flex justify-center"><Image src="/event.jpg" width={200} height={50} alt="Member" /></div>
+                  <div className="member-name text-center mt-10 text-[1.75rem]"> <h2>Raj Padval</h2> </div>
+                  <div className="member-info text-center"><p>We all know that creative juices cannot flow endlessly</p></div>
+                  <div className="member-mail text-center"> <p><a href="mailto:@gmail.com">Main@gmil.com</a></p> </div>
+                  <div className="member-social flex justify-center items-center">
+                    <ul className="social-listing">
+                      <li><a href="#" className="fa fa-facebook"></a></li>
+                      <li><a href="#" className="fa fa-instagram"></a></li>
+                      <li><a href="#" className="fa fa-twitter"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </>
   )
 }
 
