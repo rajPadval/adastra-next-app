@@ -21,10 +21,10 @@ const Navbar = () => {
           <Link href="/" className="text-adastra-blue mx-2 hover:text-[1.40rem] duration-200">
             Home
           </Link>
-          <Link href="/pages/EventPage" className="text-adastra-blue mx-2 hover:text-[1.40rem] duration-200">
+          <Link href="/events" className="text-adastra-blue mx-2 hover:text-[1.40rem] duration-200">
             Events
           </Link>
-          <Link href="/" className="text-adastra-blue mx-2 hover:text-[1.40rem] duration-200">
+          <Link href="/blogs" className="text-adastra-blue mx-2 hover:text-[1.40rem] duration-200">
             Blogs
           </Link>
           <Link href="/" className="text-adastra-blue mx-2 hover:text-[1.40rem] duration-200">
