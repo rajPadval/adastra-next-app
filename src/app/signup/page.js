@@ -39,14 +39,16 @@ const Signup = () => {
               if (!email.includes("@") || !email.includes(".")) {
                 toast.error("Plese enter a valid email");
               } else {
-                const res = axios.post("/api/auth/signup", {
+                const res = await axios.post("/api/auth/signup", {
                   fName,
                   lName,
                   email,
                   phone,
                   password,
                 });
+
                 const data = await res.data;
+                console.log(data)
                 if (data.success) {
                   toast.success(data.message);
                 } else {

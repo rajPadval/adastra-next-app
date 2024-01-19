@@ -1,17 +1,43 @@
 "use client";
+import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const Login = () => {
+
+  const router = useRouter()
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const loginUser = async () => {};
+  const loginUser = async (e) => {
+    e.preventDefault();
+    try {
+
+      const res = await axios.post("/api/auth/login", {
+        email, password
+      });
+      const data = await res.data;
+      if (data.success) {
+        toast.success(data.message)
+        setEmail("")
+        setPassword("")
+        router.push("/")
+      } else {
+        toast.error(data.message)
+      }
+
+    } catch (error) {
+      console.log(error.message)
+    }
+  };
 
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="w-full max-w-md ">
-        <form className="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4 bg-adastra-light-blue">
+        <form className="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4 bg-adastra-light-blue" onSubmit={loginUser}>
           <div className="text-gray-800 text-2xl flex justify-center  border-b-2 border-adastra-dark-blue py-2 mb-4">
             Login
           </div>
@@ -30,6 +56,8 @@ const Login = () => {
               required
               autofocus
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-6">
@@ -48,6 +76,8 @@ const Login = () => {
               name="password"
               required
               autocomplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="flex items-center justify-between">
