@@ -6,8 +6,8 @@ const Home_Blogs = () => {
   return (
     <div className='m-12'>
       <div className='flex sm:justify-evenly flex-col sm:flex-row justify-center'>
-        <div className='sm:w-[20rem] sm:h-[20rem] w-[15rem] h-[18rem] m-6 bg-adastra-purple rounded-lg rotate-[5deg] sm:hidden p-4'>
-        <Image src="/resources.jpg" width={230} height={200} className="" alt="Description" />
+        <div className='sm:w-[20rem] sm:h-[20rem] w-[15rem] h-[18rem] m-6 bg-gradient-to-b from-adastra-purple to-adastra-dark-blue rounded-lg rotate-[5deg] sm:hidden p-4'>
+          <Image src="/resources.jpg" width={230} height={200} className="" alt="Description" />
         </div>
         <div className='my-auto'>
           <h1 className='sm:text-[2rem] text-[1.5rem]'>Blog 1</h1>
@@ -19,8 +19,8 @@ const Home_Blogs = () => {
           </li>
         </div>
         <div>
-          <div className='sm:w-[17rem] sm:h-[20rem] w-[10rem] h-[13rem] bg-adastra-purple rounded-lg rotate-[10deg] sm:block hidden p-4'>
-          <Image src="/resources.jpg" width={230} height={200} className="" alt="Description" />
+          <div className='sm:w-[17rem] sm:h-[20rem] w-[10rem] h-[13rem] bg-gradient-to-b from-adastra-purple to-transparent  rounded-lg rotate-[10deg] sm:block hidden p-4'>
+            <Image src="/resources.jpg" width={230} height={200} className="" alt="Description" />
           </div>
         </div>
       </div>
