@@ -19,6 +19,10 @@ module.exports = {
       "adastra-white" : "#e7ffff",
       "adastra-purple" : "#d701f9"
     },
+    fontFamily: {
+      "Logo" : "'Lemon', serif",
+      "Normal-Text": "'Teko', sans-serif"
+    }
   },
   plugins: [],
 };

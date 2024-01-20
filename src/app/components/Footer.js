@@ -3,9 +3,9 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='bg-blue w-[100vw] h-[20vh]'>
+        <div className='bg-blue w-[100vw] h-[20vh] fixed bottom-0'>
             <div className='flex justify-evenly flex-col sm:flex-row gap-y-6 text-center'>
-                <h1 className='sm:my-auto sm:mx-auto m-8' id='Footer-Text-Logo'>AdAstra
+                <h1 className='sm:my-auto sm:mx-auto m-8 font-Logo' id='Footer-Text-Logo'>AdAstra
                     <div class="roller">
                         <span id="rolltext">To the Stars ✨<br />
                         Through<br/>
