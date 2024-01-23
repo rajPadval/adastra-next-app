@@ -181,7 +181,7 @@ const Signup = () => {
           <div className="text-xs flex gap-2 mt-2">
             <span>Or</span>
             <Link
-              href="/login"
+              href="/pages/login"
               className="text-adastra-dark-blue hover:underline"
             >
               Login with existing account
