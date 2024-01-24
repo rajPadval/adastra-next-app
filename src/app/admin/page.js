@@ -1,24 +1,22 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
-import AdminDashboard from "./components/AdminDashboard";
-import AdminLogin from "./components/AdminLogin";
-import { Routes, Route } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';
 
 const Admin = () => {
 
-  const [auth, setAuth] = useState(false);
-
-  useEffect(() => {
-    setAuth(localStorage.getItem("isAdminAuth"));
+  const isAdminAuth = useSelector((state) => state.admin.isAdminAuth);
+  const Router = useRouter();
+  if (isAdminAuth && localStorage.getItem("isAdminAuth")) {
+    Router.push("/pages/AdminDashboard");
+    return null;
+  } else {
+    Router.push("/admin/pages");
   }
-  , []);
+
   return (
-    <>
-    <Routes>
-    <Route element={auth ? <AdminDashboard /> : <AdminLogin />} path={auth ? "dashboard" : "login"}/>
-    </Routes>
-        
+    <>        
     </>
   )
 };

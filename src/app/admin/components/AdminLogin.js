@@ -1,23 +1,33 @@
 "use client"
-
 import React, { useState } from "react";
-// import "../App.css";
-import { useNavigate } from "react-router-dom";
-const AdminLogin = ({ isAdminAuth, encryptData }) => {
+import { useDispatch, useSelector } from "react-redux";
+import { setIsAdminAuth } from "@/redux/slices/adminSlice";
+import { useRouter } from 'next/navigation';
+
+const AdminLogin = ({ encryptData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isAdminAuth = useSelector((state) => state.admin.isAdminAuth);
+  const Router = useRouter();
+
   const adminLogin = () => {
     const cemail = process.env.REACT_APP_ADMIN_EMAIL;
     const cpassword = process.env.REACT_APP_ADMIN_PASSWORD;
+
     if (email === cemail && password === cpassword) {
-      isAdminAuth(true);
+      dispatch(setIsAdminAuth(true));
       const encryptedStatus = encryptData(true);
       localStorage.setItem("isAdminAuth", encryptedStatus);
     } else {
-      navigate("/");
+      Router.push("/pages/dashboard");
     }
   };
+
+  if (isAdminAuth && localStorage.getItem("isAdminAuth")) {
+    Router.push("/pages/dashboard");
+    return null;
+  }
   return (
     <>
       <div className="flex justify-center items-center text-center h-[100vh] my-auto bg-purple-700">

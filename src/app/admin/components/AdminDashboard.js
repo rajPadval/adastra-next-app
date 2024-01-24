@@ -11,6 +11,7 @@ import { setSideToggle } from "@/redux/slices/navSlice";
 
 const AdminDashboard = () => {
   const dispatch = useDispatch();
+  const Router = useRouter();
 
   const sideToggle = useSelector((state) => state.nav.sideToggle);
   const tab = useSelector((state) => state.nav.tab);
