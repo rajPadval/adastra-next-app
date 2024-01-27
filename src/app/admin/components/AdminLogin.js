@@ -1,38 +1,18 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsAdminAuth } from "@/redux/slices/adminSlice";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 const AdminLogin = ({ encryptData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const isAdminAuth = useSelector((state) => state.admin.isAdminAuth);
-  const Router = useRouter();
-  
-  const adminLogin = () => {
-    // const cemail = process.env.REACT_APP_ADMIN_EMAIL;
-    const cemail = "adastra@sigce.edu.in";
-    // const cpassword = process.env.REACT_APP_ADMIN_PASSWORD;
-    const cpassword = "temp@123";
 
-    if (email.trim() === cemail && password.trim() === cpassword) {
-      // localStorage.setItem("isAdminAuth", true);
-      console.log("logged");
-      const encryptedStatus = encryptData(true);
-      dispatch(setIsAdminAuth(true));
-      Router.push("/admin/pages/AdminDshboard");
-      console.log(encryptedStatus);
-    }else{
-      console.log("Invalid Credentials");
-    }
+  const adminLogin = (e) => {
+    e.preventDefault();
   };
-
-  if (isAdminAuth && localStorage.getItem("isAdminAuth")) {
-    Router.push("/admin/pages/AdminDshboard");
-    return null;
-  }
   return (
     <>
       <div className="flex justify-center items-center text-center h-[100vh] my-auto bg-purple-700">

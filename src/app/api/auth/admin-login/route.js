@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Register } from "@/server/models/Register";
+import { Admin } from "@/server/models/Admin";
 import { connectDb } from "@/server/connection";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
@@ -10,12 +10,12 @@ export const POST = async (request) => {
   const { email, password } = await request.json();
 
   try {
-    let user = await Register.findOne({ email });
+    let user = await Admin.findOne({ email });
 
     if (!user) {
       return NextResponse.json({
         success: false,
-        message: "Please signup",
+        message: "No admin found with this email",
       });
     }
 
@@ -28,14 +28,14 @@ export const POST = async (request) => {
       });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: user._id }, process.env.JWT_ADMIN_SECRET, {
       expiresIn: "1h",
     });
 
     const response = NextResponse.json({
       success: true,
-      message: "Login successful",
-      user: "User",
+      message: "Welcome Admin",
+      user: "Admin",
     });
 
     response.cookies.set("token", token, {
