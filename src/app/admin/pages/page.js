@@ -9,16 +9,10 @@ const page = () => {
 
   const isAdminAuth = useSelector((state) => state.admin.isAdminAuth);
   const Router = useRouter();
-    if (isAdminAuth && localStorage.getItem("isAdminAuth")) {
-      Router.push("/pages/AdminDashboard");
-        return null;
-      } else {
-        Router.push("/admin/pages");
-      }
 
   return (
     <div>
-        <AdminLogin />
+        {isAdminAuth ? Router.push("/admin/pages/AdminDshboard") : <AdminLogin />}
     </div>
   )
 }

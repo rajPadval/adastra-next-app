@@ -6,17 +6,12 @@ import { useRouter } from 'next/navigation';
 
 const page = () => {
 
-    const isAdminAuth = useSelector((state) => state.admin.isAdminAuth)
-    const Router = useRouter();
-    if (isAdminAuth && localStorage.getItem("isAdminAuth")) {
-        return null;
-      } else {
-        Router.push("/admin/pages");
-      }
+  const isAdminAuth = useSelector((state) => state.admin.isAdminAuth);
+  const Router = useRouter();
 
   return (
     <div>
-        <AdminDashboard />
+        {isAdminAuth ? <AdminDashboard /> : Router.push("/admin/pages")}
     </div>
   )
 }

@@ -10,22 +10,27 @@ const AdminLogin = ({ encryptData }) => {
   const dispatch = useDispatch();
   const isAdminAuth = useSelector((state) => state.admin.isAdminAuth);
   const Router = useRouter();
-
+  
   const adminLogin = () => {
-    const cemail = process.env.REACT_APP_ADMIN_EMAIL;
-    const cpassword = process.env.REACT_APP_ADMIN_PASSWORD;
+    // const cemail = process.env.REACT_APP_ADMIN_EMAIL;
+    const cemail = "adastra@sigce.edu.in";
+    // const cpassword = process.env.REACT_APP_ADMIN_PASSWORD;
+    const cpassword = "temp@123";
 
-    if (email === cemail && password === cpassword) {
-      dispatch(setIsAdminAuth(true));
+    if (email.trim() === cemail && password.trim() === cpassword) {
+      // localStorage.setItem("isAdminAuth", true);
+      console.log("logged");
       const encryptedStatus = encryptData(true);
-      localStorage.setItem("isAdminAuth", encryptedStatus);
-    } else {
-      Router.push("/pages/dashboard");
+      dispatch(setIsAdminAuth(true));
+      Router.push("/admin/pages/AdminDshboard");
+      console.log(encryptedStatus);
+    }else{
+      console.log("Invalid Credentials");
     }
   };
 
   if (isAdminAuth && localStorage.getItem("isAdminAuth")) {
-    Router.push("/pages/dashboard");
+    Router.push("/admin/pages/AdminDshboard");
     return null;
   }
   return (
@@ -41,7 +46,7 @@ const AdminLogin = ({ encryptData }) => {
             name="email"
             id="email"
             placeholder="Enter Admin Email"
-            className="py-2 px-3 md:px-5 rounded-md  outline-none mt-8 text-2xl placeholder:text-lg text-center "
+            className="py-2 px-3 md:px-5 rounded-md  outline-none mt-8 text-2xl placeholder:text-lg text-center text-[black]"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -51,16 +56,14 @@ const AdminLogin = ({ encryptData }) => {
             name="password"
             id="password"
             placeholder="Enter Admin Password"
-            className="py-2 px-3 md:px-5 rounded-md outline-none text-2xl placeholder:text-lg text-center  
-          "
+            className="py-2 px-3 md:px-5 rounded-md outline-none text-2xl placeholder:text-lg text-center text-[black]"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           />
           <button
             type="submit"
-            className="border border-purple-500 text-purple-500 font-bold hover:bg-purple-500 rounded-md shadow-md hover:text-black newfont text-2xl px-5 py-1  
-      my-6 transition-all"
+            className="border border-purple-500 text-purple-500 font-bold hover:bg-purple-500 rounded-md shadow-md hover:text-black newfont text-2xl px-5 py-1 my-6 transition-all"
             onClick={adminLogin}
           >
             Login
