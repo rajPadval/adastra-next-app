@@ -6,7 +6,7 @@ connectDb();
 
 export const GET = async (request) => {
   try {
-    const blogs = await Blogpost.find({}).sort({ createdAt: -1 });
+    const blogs = await Blogpost.find({request}).sort({ createdAt: -1 });
 
     if (!blogs) {
       return NextResponse.json({ success: false, message: "No blogs to show" });

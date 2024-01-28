@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar'
 import Image from 'next/image'
+import Link from 'next/link';
 
 const BlogsList = () => {
 
@@ -27,6 +28,7 @@ const BlogsList = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
             {blogs.map(blog => (
                 <div className='flex flex-col items-center  m-5'>
+                    <Link href={`/pages/blogs/?id=${blog._id}`}>
                     <div>
                         <Image className='m-10 z-0' src="/event.jpg" width={200} height={100} />
                     </div>
@@ -36,6 +38,7 @@ const BlogsList = () => {
                             <h2 className='text-[0.85rem] absolute mt-[0.45rem] left-[10rem] w-[7rem]'>- {blog.creator}</h2>
                         </div>
                     </div>
+                    </Link>
                 </div>
             ))}
             </div>
