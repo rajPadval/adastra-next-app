@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
             <div className='flex sm:flex-row'>
               <div className='flex flex-col sm:ml-[25rem] ml-[3rem] w-[30vw]'>
-                <Image src="./scrool.svg" width={70} height={50} className='animate-bounce sm:w-[70em] w-[3em]' />
+                <Image src="./scrool.svg" width={70} height={50} className='animate-bounce sm:w-[4em] w-[3em]' />
                 <div className='sm:m-[35px] m-[20px] font-bold'>
                   <p className='text-adastra-light-blue'>|</p>
                   <p className='text-adastra-light-blue'>|</p>
