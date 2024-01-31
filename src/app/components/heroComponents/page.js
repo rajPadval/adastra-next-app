@@ -47,7 +47,7 @@ const Hero = () => {
 
   return (
     <div id='wrap'>
-      <div id='main' className='h-[100vh] bg-adastra-light-blue'>
+      <div id='main' className='h-[100vh] bg-adastra-light-blue p-[55px]'>
         <div className='bg-adastra-dark-blue rounded-2xl h-[90vh]'>
           <div className='flex h-[70vh] justify-center items-center my-auto'>
             <Image src="/download.png" width={1000} height={500} />
