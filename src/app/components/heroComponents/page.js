@@ -52,10 +52,10 @@ const Hero = () => {
           <div className='flex h-[70vh] justify-center items-center my-auto'>
             <Image src="/download.png" width={1000} height={500} />
           </div>
-            <div className='flex'>
-              <div className='flex flex-col ml-[25rem] w-[30vw]'>
-                <Image src="./scrool.svg" width={70} height={50} className='animate-bounce' />
-                <div className='m-[35px] font-bold'>
+            <div className='flex sm:flex-row'>
+              <div className='flex flex-col sm:ml-[25rem] ml-[3rem] w-[30vw]'>
+                <Image src="./scrool.svg" width={70} height={50} className='animate-bounce sm:w-[70em] w-[3em]' />
+                <div className='sm:m-[35px] m-[20px] font-bold'>
                   <p className='text-adastra-light-blue'>|</p>
                   <p className='text-adastra-light-blue'>|</p>
                   <p className='text-adastra-light-blue'>|</p>
@@ -65,13 +65,13 @@ const Hero = () => {
                 </div>
               </div>
               <div className='flex my-auto mx-auto'> 
-                <FaInstagram className='text-[4rem] m-4 text-adastra-light-blue' />
-                <FaTwitter className='text-[4rem] m-4 text-adastra-light-blue' />
-                <FaLinkedin className='text-[4rem] m-4 text-adastra-light-blue' />
+                <FaInstagram className='sm:text-[4rem] text-[1.5rem] m-4 text-adastra-light-blue' />
+                <FaTwitter className='sm:text-[4rem] text-[1.5rem] m-4 text-adastra-light-blue' />
+                <FaLinkedin className='sm:text-[4rem] text-[1.5rem] m-4 text-adastra-light-blue' />
               </div>
             </div>
         </div>
-        <div className='absolute top-[96vh] left-[35%] text-4xl font-bold text-adastra-dark-blue '>To The Stars Through HardShip 🚀</div>
+        <div className='absolute top-[96vh] left-[35%] sm:text-4xl text-xl font-bold text-adastra-dark-blue '>To The Stars Through HardShip 🚀</div>
       </div>
     </div>
   );

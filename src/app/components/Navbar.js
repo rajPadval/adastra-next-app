@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="items-center sm:justify-between py-2 px-3 w-[80vw] m-6  rounded-md border-2 border-[black] bg-adastra-dark-blue shadow-[0px_3px_0px_3px_black] fixed xl:left-[12rem] lg:left-[8rem] md:left-[6rem] sm:left-[4rem] top-[0rem] z-10">
+    <nav className="items-center sm:justify-between py-2 px-3 w-[80vw] m-6  rounded-md border-2 border-[black] bg-adastra-dark-blue shadow-[0px_3px_0px_3px_black] fixed xl:left-[10rem] lg:left-[6rem] md:left-[4rem] sm:left-[4rem] top-[0rem] z-10">
       <div className="p-3 flex justify-between">
         <div className="flex ">
           <Image src="/download.png" width={40} height={40} className="" />
