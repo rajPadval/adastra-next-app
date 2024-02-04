@@ -15,9 +15,13 @@ const HomePage = () => {
         <div className='gap-6'>
             <Navbar />
             {/* <Hero /> */}
-            <Hero/>
-            <Home_Events />
-            <Home_Blogs />
+            <Hero />
+            <div>
+                <Home_Events />
+            </div>
+            <div className='sm:mt-[10rem]'>
+                <Home_Blogs />
+            </div>
             <Members />
             <Vision />
             <Newsletter />

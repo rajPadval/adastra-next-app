@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 const Home_Events = () => {
     return (
-        <div className='mt-[150px] m-12'>
+        <div className='mt-[150px] m-12 bg-adastra-dark-blue h-[60vh]'>
             <div className='flex sm:justify-evenly flex-col sm:flex-row justify-center'>
                 <div>
-                    <div className='sm:w-[17rem] sm:h-[20rem] w-[15rem] h-[18rem] m-6 bg-gradient-to-b from-adastra-light-blue to-transparent rounded-lg rotate-[5deg] p-4'>
-                        <Image src="/event.jpg" width={230} height={200} className="" alt="Description" />
+                    <div className='sm:w-[30rem] sm:h-[33rem] w-[15rem] h-[18rem] m-6 bg-gradient-to-b from-adastra-light-blue to-transparent rounded-lg rotate-[5deg] p-4'>
+                        <Image src="/event.jpg" width={230} height={200} className="sm:w-[28rem] h-[16rem] sm:h-[33rem]" alt="Description" />
                     </div>
                 </div>
                 <div className='my-auto flex flex-col mx-[10px]'>

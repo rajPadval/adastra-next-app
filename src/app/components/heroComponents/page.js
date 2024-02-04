@@ -47,29 +47,36 @@ const Hero = () => {
 
   return (
     <div id='wrap'>
-      <div id='main' className='h-[100vh] bg-adastra-light-blue p-[55px]'>
+      <div id='main' className='h-[100vh] w-[100%] bg-adastra-light-blue sm:p-[55px] p-[45px]'>
         <div className='bg-adastra-dark-blue rounded-2xl h-[90vh]'>
-          <div className='flex h-[70vh] justify-center items-center my-auto'>
+          <div className='flex h-[70vh] justify-between items-center my-auto'>
             <Image src="/download.png" width={1000} height={500} />
-          </div>
-            <div className='flex sm:flex-row'>
-              <div className='flex flex-col sm:ml-[25rem] ml-[3rem] w-[30vw]'>
-                <Image src="./scrool.svg" width={70} height={50} className='animate-bounce sm:w-[4em] w-[3em]' />
-                <div className='sm:m-[35px] m-[20px] font-bold'>
-                  <p className='text-adastra-light-blue'>|</p>
-                  <p className='text-adastra-light-blue'>|</p>
-                  <p className='text-adastra-light-blue'>|</p>
-                  <p className='text-adastra-dark-blue'>|</p>
-                  <p className='text-adastra-dark-blue'>|</p>
-                  <p className='text-adastra-dark-blue'>|</p>
+                <div className=''>
+                  <Image src="/pinkStar10x.png" className='animate-bounce duration-[5s] absolute right-[20rem] top-[18rem] opacity-[60%] lg:w-[3rem] xl:w-[8rem] 2xl:top-[25rem] w-[2rem] lg:top-[20rem] md:visible' width={150} height={100} />
+                  <Image src="/blueStar10x.png" className='animate-bounce duration-[5s] absolute right-[13rem] top-[26rem] opacity-[60%] lg:w-[3rem] xl:w-[8rem] 2xl:top-[33rem] w-[2rem] lg:top-[27rem] md:visible' width={160} height={100} />
+                  <Image src="/greenStar10x.png" className='animate-bounce duration-[5s] absolute right-[24rem] top-[31rem] opacity-[60%] lg:w-[5rem] xl:w-[8rem] 2xl:top-[35rem] w-[2rem] lg:top-[35rem] md:visible' width={130} height={100} />
                 </div>
+          </div>
+          <div className='flex sm:flex-row'>
+            <div className='flex flex-col sm:ml-[25rem] ml-[3rem] w-[30vw]'>
+              <div>
+                <Image src="./scrool.svg" width={70} height={50} className='animate-bounce sm:w-[4em] w-[3em]' />
               </div>
-              <div className='flex my-auto mx-auto'> 
-                <FaInstagram className='sm:text-[4rem] text-[1.5rem] m-4 text-adastra-light-blue' />
-                <FaTwitter className='sm:text-[4rem] text-[1.5rem] m-4 text-adastra-light-blue' />
-                <FaLinkedin className='sm:text-[4rem] text-[1.5rem] m-4 text-adastra-light-blue' />
+              <div className='sm:m-[35px] m-[20px] font-bold'>
+                <p className='text-adastra-light-blue'>|</p>
+                <p className='text-adastra-light-blue'>|</p>
+                <p className='text-adastra-light-blue'>|</p>
+                <p className='text-adastra-dark-blue'>|</p>
+                <p className='text-adastra-dark-blue'>|</p>
+                <p className='text-adastra-dark-blue'>|</p>
               </div>
             </div>
+            <div className='flex sm:my-0 my-8 sm:mx-auto md:flex-row flex-col'>
+              <FaInstagram className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' />
+              <FaTwitter className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' />
+              <FaLinkedin className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' />
+            </div>
+          </div>
         </div>
         <div className='absolute top-[96vh] left-[35%] sm:text-4xl text-xl font-bold text-adastra-dark-blue '>To The Stars Through HardShip 🚀</div>
       </div>

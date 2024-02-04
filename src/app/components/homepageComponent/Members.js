@@ -8,7 +8,7 @@ const Members = () => {
         <div className="container mx-auto">
           <h1 className="text-center text-4xl font-bold">Our Team</h1>
           <p className="text-center">Meet Our Hardworking Team</p>
-          <div className="grid grid-cols-3 gap-6 mt-16">
+          <div className="grid sm:grid-cols-3 grid-cols-1 gap-6 mt-16">
             
           <div className="column">
               <div className="teamcol">

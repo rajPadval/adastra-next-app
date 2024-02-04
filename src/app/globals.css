@@ -10,6 +10,17 @@ body {
     color:white;
     overflow-x: hidden;
 }
-
-
-
+/* .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0px !important;/**/
+  /* }
+  #card-1{
+    z-index: -2;
+  }
+  #card-2{
+    z-index: -1;
+  } */ 
+  
