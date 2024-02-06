@@ -24,4 +24,18 @@ body {
   #card-2{
     z-index: -1;
   } */ 
-  
+  .slide-enter-active, .slide-leave-active {
+    transition: transform 0.5s;
+  }
+
+  .slide-enter, .slide-leave-to {
+    transform: translateX(0);
+  }
+
+  .slide-leave, .slide-enter-to {
+    transform: translateX(-100%);
+  }
+  .neon-text {
+    text-shadow: 0 0 5px #0062f4, 0 0 10px #0062f4, 0 0 15px #0062f4;
+    color: #0062f4; /* Set your desired neon color */
+  }

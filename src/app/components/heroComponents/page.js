@@ -36,6 +36,9 @@ const Hero = () => {
       setElementHeight(element.offsetHeight);
     };
 
+    document.getElementById("slide-logo").style.transition = 'all 0.5s ease-in-out';
+    document.getElementById("slide-text").style.transition = 'all 0.5s ease-in-out';
+
     window.addEventListener('scroll', onScroll);
     window.addEventListener('resize', onResize);
 
@@ -51,9 +54,9 @@ const Hero = () => {
         <div className='bg-adastra-dark-blue rounded-2xl h-[90vh] border-[3px] border-adastra-white'>
           <div className='flex h-[70vh] justify-between items-center my-auto'>
             <div className='flex md:flex-row flex-col justify-center items-center md:mx-28'>
-              <Image src="/logo.png" width={300} height={500} className='w-[10rem] md:w-[20rem]' />
-              <div className='flex flex-col justify-center items-center'>
-              <h1 className='sm:text-9xl text-4xl font-bold text-adastra-light-blue'>Adastra</h1>
+              <Image src="/logo.png" width={300} height={500} className='w-[10rem] md:w-[20rem]' id='slide-logo'/>
+              <div className='flex flex-col justify-center items-center' id='slide-text'>
+              <h1 className='sm:text-9xl text-4xl font-bold text-adastra-light-blue'>AdAstra</h1>
               <p className='md:text-[1.4rem] md:tracking-[0.3rem] text-[0.6rem] font-Logo'>To The Stars Throuugh HardShip</p>
               </div>
             </div>
@@ -78,9 +81,9 @@ const Hero = () => {
               </div>
             </div>
             <div className='flex sm:my-0 my-8 sm:mx-auto md:flex-row flex-col'>
-              <FaInstagram className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' />
-              <FaTwitter className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' />
-              <FaLinkedin className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' />
+              <a href='https://instagram.com' className=' hover:text-adastra-purple hover:text-[1.6rem]'><FaInstagram className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue' /></a>
+              <FaTwitter className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue hover:text-adastra-purple hover:text-[1.6rem]' />
+              <FaLinkedin className='sm:text-[4rem] text-[1.5rem] sm:m-4 m-2 text-adastra-light-blue hover:text-adastra-purple hover:text-[1.6rem]' />
             </div>
           </div>
         </div>
