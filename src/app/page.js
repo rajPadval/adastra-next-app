@@ -8,14 +8,17 @@ import Members from "./components/homepageComponent/Members";
 import Home_Blogs from "./components/homepageComponent/Home_Blogs";
 import Home_Events from "./components/homepageComponent/Home_Events";
 import Hero from './components/heroComponents/page';
+import Home_Hero from './components/homepageComponent/Home_Hero';
 // import Hero from '../components/Hero';
 
 const HomePage = () => {
+    document.title = 'AdAstra | Home'
     return (
         <div className='gap-6'>
             <Navbar />
             {/* <Hero /> */}
             <Hero />
+            {/* <Home_Hero/> */}
             <div>
                 <Home_Events />
             </div>

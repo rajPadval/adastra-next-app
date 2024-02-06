@@ -1,0 +1,26 @@
+<svg width="300" height="80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define the linear gradient -->
+  <linearGradient id="gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+    <stop offset="0%" style="stop-color: #2f2fa2; stop-opacity: 1" />
+    <stop offset="100%" style="stop-color: #00c3ff; stop-opacity: 1" />
+  </linearGradient>
+
+  <!-- Apply the gradient to the text with the Protest Strike font -->
+  <text x="50%" y="50%" font-family="Protest Strike" font-size="40" font-weight="900"
+    fill="url(#gradient)" text-anchor="middle" dominant-baseline="middle"
+    filter="url(#textShadow)" style="letter-spacing: 2px;">EVENTS</text>
+
+  <!-- Add a subtle text shadow for depth -->
+  <defs>
+    <filter id="textShadow" x="0" y="0" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="3" dy="3" result="offsetblur" />
+      <feFlood flood-color="black" />
+      <feComposite in2="offsetblur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

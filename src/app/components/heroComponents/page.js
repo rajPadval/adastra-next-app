@@ -48,14 +48,20 @@ const Hero = () => {
   return (
     <div id='wrap'>
       <div id='main' className='h-[100vh] w-[100%] bg-adastra-light-blue sm:p-[55px] p-[45px]'>
-        <div className='bg-adastra-dark-blue rounded-2xl h-[90vh]'>
+        <div className='bg-adastra-dark-blue rounded-2xl h-[90vh] border-[3px] border-adastra-white'>
           <div className='flex h-[70vh] justify-between items-center my-auto'>
-            <Image src="/download.png" width={1000} height={500} />
-                <div className=''>
-                  <Image src="/pinkStar10x.png" className='animate-bounce duration-[5s] absolute right-[20rem] top-[18rem] opacity-[60%] lg:w-[3rem] xl:w-[8rem] 2xl:top-[25rem] w-[2rem] lg:top-[20rem] md:visible' width={150} height={100} />
-                  <Image src="/blueStar10x.png" className='animate-bounce duration-[5s] absolute right-[13rem] top-[26rem] opacity-[60%] lg:w-[3rem] xl:w-[8rem] 2xl:top-[33rem] w-[2rem] lg:top-[27rem] md:visible' width={160} height={100} />
-                  <Image src="/greenStar10x.png" className='animate-bounce duration-[5s] absolute right-[24rem] top-[31rem] opacity-[60%] lg:w-[5rem] xl:w-[8rem] 2xl:top-[35rem] w-[2rem] lg:top-[35rem] md:visible' width={130} height={100} />
-                </div>
+            <div className='flex md:flex-row flex-col justify-center items-center md:mx-28'>
+              <Image src="/logo.png" width={300} height={500} className='w-[10rem] md:w-[20rem]' />
+              <div className='flex flex-col justify-center items-center'>
+              <h1 className='sm:text-9xl text-4xl font-bold text-adastra-light-blue'>Adastra</h1>
+              <p className='md:text-[1.4rem] md:tracking-[0.3rem] text-[0.6rem] font-Logo'>To The Stars Throuugh HardShip</p>
+              </div>
+            </div>
+            <div className=''>
+              <Image src="/pinkStar10x.png" className='animate-bounce duration-[5s] absolute right-[20rem] top-[18rem] opacity-[60%] lg:w-[3rem] xl:w-[8rem] 2xl:top-[25rem] w-[2rem] lg:top-[20rem] md:visible' width={150} height={100} />
+              <Image src="/blueStar10x.png" className='animate-bounce duration-[5s] absolute right-[13rem] top-[26rem] opacity-[60%] lg:w-[3rem] xl:w-[8rem] 2xl:top-[33rem] w-[2rem] lg:top-[27rem] md:visible' width={160} height={100} />
+              <Image src="/greenStar10x.png" className='animate-bounce duration-[5s] absolute right-[24rem] top-[31rem] opacity-[60%] lg:w-[5rem] xl:w-[8rem] 2xl:top-[35rem] w-[2rem] lg:top-[35rem] md:visible' width={130} height={100} />
+            </div>
           </div>
           <div className='flex sm:flex-row'>
             <div className='flex flex-col sm:ml-[25rem] ml-[3rem] w-[30vw]'>

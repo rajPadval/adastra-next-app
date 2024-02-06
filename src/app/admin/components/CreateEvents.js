@@ -23,7 +23,7 @@ const CreateEvents = () => {
   // function to get event
   const getEvent = async () => {
     const response = await fetch(
-      "https://adastra-backend.vercel.app/api/geteventpost"
+      "/api/event/get"
     );
     const data = await response.json();
     dispatch(setEvents(data));
@@ -44,7 +44,7 @@ const CreateEvents = () => {
           // const res = await fetch(
           //   "http://localhost:8000/api/createeventpost",
           const res = await fetch(
-            "https://adastra-backend.vercel.app/api/createeventpost",
+            "/api/event/create",
             {
               method: "POST",
               headers: {
@@ -78,7 +78,7 @@ const CreateEvents = () => {
   const deleteEvent = async (eventId) => {
     // console.log(`http://localhost:8000/api/deleteevent/${eventId}`);
     const res = await fetch(
-      `https://adastra-backend.vercel.app/api/deleteevent/${eventId}`,
+      `/api/event/delete/${eventId}`,
       // `http://localhost:8000/api/deleteevent/${eventId}`,
       {
         method: "POST",

@@ -1,9 +1,35 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Home_Hero from './Home_Hero';
 
 const Home_Blogs = () => {
+  document.title = 'Blogs';
+
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://localhost:3000/api/blog/get'); // Update with your actual API endpoint
+        const data = await response.json();
+
+        if (data.success) {
+          setBlogs(data.blogs);
+          alert('Data fetched successfully');
+        } else {
+          console.error(data.message || data.error);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
+    <>
     <div className='m-12 bg-adastra-dark-blue h-[60vh]'>
       <div className='flex sm:justify-evenly flex-col sm:flex-row justify-center'>
         <div className='sm:w-[20rem] sm:h-[20rem] w-[15rem] h-[18rem] m-6 bg-gradient-to-b from-adastra-purple to-adastra-dark-blue rounded-lg rotate-[5deg] sm:hidden p-4'>
@@ -25,6 +51,7 @@ const Home_Blogs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

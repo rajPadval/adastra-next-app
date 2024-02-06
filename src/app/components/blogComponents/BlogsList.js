@@ -24,25 +24,76 @@ const BlogsList = () => {
     }, []);
 
     return (
-        <div className='m-6'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
-            {blogs.map(blog => (
-                <div className='flex flex-col items-center  m-5'>
-                    <Link href={`/pages/blogs/?id=${blog._id}`}>
-                    <div>
-                        <Image className='m-10 z-0' src="/event.jpg" width={200} height={100} />
-                    </div>
-                    <div className='w-[18rem] h-[20rem] border-[2px] border-adastra-purple m-8 p-3 bg-gradient-to-t from-adastra-purple to-[#ffffff00] absolute z-[1]'>
-                        <div className='w-[100%] absolute left-[1rem] mt-[10rem]'>
-                            <h1 className='text-[1.5rem] w-[16rem] h-[6.5rem] overflow-y-hidden'>{blog.title}</h1>
-                            <h2 className='text-[0.85rem] absolute mt-[0.45rem] left-[10rem] w-[7rem]'>- {blog.creator}</h2>
-                        </div>
-                    </div>
-                    </Link>
-                </div>
-            ))}
-            </div>
-        </div>
+      <div className='grid grid-cols-4'>
+
+      <div class="container mx-auto p-8 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-lg overflow-hidden">
+      <div class="relative">
+        <Image src="/event.jpg" alt="Image Description" width={100} height={130} class="object-cover w-full h-48 rounded-md" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
+      </div>
+      <div class="mt-4">
+        <h1 class="text-3xl font-bold text-white">Your Title</h1>
+        <p class="text-lg text-gray-300">Your Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="mt-4 flex justify-between items-end">
+        <p class="text-sm text-gray-400">Written by: <span class="font-semibold">Writer Name</span></p>
+      </div>
+    </div>
+
+    <div class="container mx-auto p-8 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-lg overflow-hidden">
+      <div class="relative">
+        <Image src="/event.jpg" alt="Image Description" width={100} height={130} class="object-cover w-full h-48 rounded-md" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
+      </div>
+      <div class="mt-4">
+        <h1 class="text-3xl font-bold text-white">Your Title</h1>
+        <p class="text-lg text-gray-300">Your Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="mt-4 flex justify-between items-end">
+        <p class="text-sm text-gray-400">Written by: <span class="font-semibold">Writer Name</span></p>
+      </div>
+    </div>
+    <div class="container mx-auto p-8 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-lg overflow-hidden">
+      <div class="relative">
+        <Image src="/event.jpg" alt="Image Description" width={100} height={130} class="object-cover w-full h-48 rounded-md" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
+      </div>
+      <div class="mt-4">
+        <h1 class="text-3xl font-bold text-white">Your Title</h1>
+        <p class="text-lg text-gray-300">Your Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="mt-4 flex justify-between items-end">
+        <p class="text-sm text-gray-400">Written by: <span class="font-semibold">Writer Name</span></p>
+      </div>
+    </div>
+    <div class="container mx-auto p-8 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-lg overflow-hidden">
+      <div class="relative">
+        <Image src="/event.jpg" alt="Image Description" width={100} height={130} class="object-cover w-full h-48 rounded-md" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
+      </div>
+      <div class="mt-4">
+        <h1 class="text-3xl font-bold text-white">Your Title</h1>
+        <p class="text-lg text-gray-300">Your Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="mt-4 flex justify-between items-end">
+        <p class="text-sm text-gray-400">Written by: <span class="font-semibold">Writer Name</span></p>
+      </div>
+    </div>
+    <div class="container mx-auto p-8 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-lg overflow-hidden">
+      <div class="relative">
+        <Image src="/event.jpg" alt="Image Description" width={100} height={130} class="object-cover w-full h-48 rounded-md" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
+      </div>
+      <div class="mt-4">
+        <h1 class="text-3xl font-bold text-white">Your Title</h1>
+        <p class="text-lg text-gray-300">Your Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="mt-4 flex justify-between items-end">
+        <p class="text-sm text-gray-400">Written by: <span class="font-semibold">Writer Name</span></p>
+      </div>
+    </div>
+
+      </div>
     )
 }
 

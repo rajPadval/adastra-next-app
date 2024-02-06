@@ -20,9 +20,11 @@ const Navbar = () => {
           setScrolled(scrolled);
         }
         if (scrolled) {
-          ele.classList.add('border-2', 'border-[black]', 'shadow-[0px_3px_0px_3px_black]');
+          ele.classList.add('border-2', 'border-[black]', 'shadow-[0px_3px_0px_3px_black]', 'top-[1.5rem]');
+          ele.classList.remove('md:top-[3.4rem]')
         } else {
-          ele.classList.remove('border-2', 'border-[black]', 'shadow-[0px_3px_0px_3px_black]');
+          ele.classList.remove('border-2', 'border-[black]', 'shadow-[0px_3px_0px_3px_black]', 'top-[1.5rem]');
+          ele.classList.add('md:top-[3.4rem]')
         }
       } else {
         console.warn('Element with ID "nav" not found');
@@ -40,24 +42,24 @@ const Navbar = () => {
   return (
     <nav id="nav" className="items-center sm:justify-between top-[2rem] py-2 px-3 sm:navbar md:top-[3.4rem] sm:w-[80vw] w-[60vw] m-6 rounded-md bg-adastra-dark-blue fixed xl:left-[10rem] lg:left-[6rem] md:left-[6rem] sm:left-[4rem] left-[3.2rem] z-10 duration-100">
       <div className="p-3 flex justify-between">
-        <div className="flex ">
-          <Image src="/download.png" width={40} height={40} className="" />
+        <div className="flex justify-center items-center">
+          <Image src="/logo.png" width={50} height={40} className="" />
           <span className="sm:text-4xl text-lg ml-5 font-Logo">AdAstra</span>
         </div>
         <div className="text-xl flex gap-4 hidden sm:block font-Normal-Text mt-2">
-          <Link href="/" className="text-adastra-blue mx-2 text-[2rem] hover:text-[1.40rem] duration-200">
+          <Link href="/" className="text-adastra-blue mx-2 hover:text-[2.2rem] text-[2rem] duration-200">
             Home
           </Link>
-          <Link href="/pages/events" className="text-adastra-blue mx-2 text-[2rem] hover:text-[1.40rem] duration-200">
+          <Link href="/pages/events" className="text-adastra-blue mx-2 hover:text-[2.2rem] text-[2rem] duration-200">
             Events
           </Link>
-          <Link href="/pages/blogs" className="text-adastra-blue mx-2 text-[2rem] hover:text-[1.40rem] duration-200">
+          <Link href="/pages/blogs" className="text-adastra-blue mx-2 hover:text-[2.2rem] text-[2rem] duration-200">
             Blogs
           </Link>
-          <Link href="/pages/about" className="text-adastra-blue mx-2 text-[2rem] hover:text-[1.40rem] duration-200">
+          <Link href="/pages/about" className="text-adastra-blue mx-2 hover:text-[2.2rem] text-[2rem] duration-200">
             About
           </Link>
-          <Link href="/pages/login" className="text-adastra-blue mx-2 text-[2rem] hover:text-[1.40rem] duration-200">
+          <Link href="/pages/login" className="text-adastra-blue mx-2 hover:text-[2.2rem] text-[2rem] duration-200">
             Login
           </Link>
         </div>

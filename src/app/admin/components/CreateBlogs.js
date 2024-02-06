@@ -6,9 +6,9 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const CreateBlogs = () => {
   const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    getPosts();
-  }, [posts]);
+  // useEffect(() => {
+  //   getPosts();
+  // }, [posts]);
 
   const editor = useRef(null);
   const [content, setContent] = useState("");
@@ -32,7 +32,7 @@ const CreateBlogs = () => {
           // const res = await fetch(
           //   "http://localhost:8000/api/createblogpost",
           const res = await fetch(
-            "https://adastra-backend.vercel.app/api/createblogpost",
+            "/api/blog/create",
             {
               method: "POST",
               headers: {
@@ -65,7 +65,7 @@ const CreateBlogs = () => {
   // fuction to get post
   const getPosts = async () => {
     const res = await fetch(
-      "https://adastra-backend.vercel.app/api/getblogpost"
+      "/api/blog/get"
     );
     // const res = await fetch("http://localhost:8000/api/getblogpost");
     const data = await res.json();
@@ -75,7 +75,7 @@ const CreateBlogs = () => {
   const deletePost = async (postId) => {
     // console.log(`http://localhost:8000/api/deletepost/${postId}`);
     const res = await fetch(
-      `https://adastra-backend.vercel.app/api/deletepost/${postId}`,
+      `/api/blog/delete/${postId}`,
       // `http://localhost:8000/api/deletepost/${postId}`,
       {
         method: "POST",
@@ -84,6 +84,8 @@ const CreateBlogs = () => {
     await res.json();
     await toast.success("post removed");
   };
+
+  getPosts();
 
   return (
     <>
@@ -201,7 +203,7 @@ const CreateBlogs = () => {
 
         {/* Created posts listed here */}
         <div className=" w-[90vw] md:w-[20vw] h-[90vh] p-3 flex flex-col  gap-3">
-          {posts.map((post, i) => {
+          {/* {posts.map((post, i) => {
             return (
               <div
                 className="flex justify-between items-center  shadow-md rounded-md p-3 hover:scale-105 transition-all"
@@ -226,7 +228,7 @@ const CreateBlogs = () => {
                 />
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
     </>
