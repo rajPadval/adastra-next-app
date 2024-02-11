@@ -12,14 +12,18 @@ const inter = Inter({ subsets: ["latin"] });
 import { Provider } from "react-redux";
 import store from "@/redux/store";
 import { Toaster } from "react-hot-toast";
+import Navbar from "./components/Navbar";
+import ConnectWithUs from "./components/ConnectWithUs";
 
 export default function RootLayout({ children }) {
   return (
     <Provider store={store}>
       <html lang="en">
         <body className={inter.className}>
+          <Navbar />
           <Toaster />
           {children}
+          <ConnectWithUs />
         </body>
       </html>
     </Provider>

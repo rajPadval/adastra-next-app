@@ -1,5 +1,6 @@
 "use client";
 import { MdOutlineClose } from "react-icons/md";
+import Link from "next/link";
 
 const ExtendedNav = ({ toggleNav, setToggleNav }) => {
   return (
@@ -15,15 +16,24 @@ const ExtendedNav = ({ toggleNav, setToggleNav }) => {
         }}
       />
       <div className="flex flex-col gap-8 ">
-        <li className="list-none text-xl text-white  cursor-pointer lg:hidden block">
+        <Link
+          href="/"
+          className="list-none text-xl text-white  cursor-pointer lg:hidden block"
+        >
           HOME
-        </li>
-        <li className="list-none text-xl text-white  cursor-pointer lg:hidden block">
+        </Link>
+        <Link
+          href="/pages/about"
+          className="list-none text-xl text-white  cursor-pointer lg:hidden block"
+        >
+          ABOUT
+        </Link>
+        <Link
+          href="/events"
+          className="list-none text-xl text-white  cursor-pointer lg:hidden block"
+        >
           EVENTS
-        </li>
-        <li className="list-none text-xl text-white  cursor-pointer lg:hidden block">
-          MORE
-        </li>
+        </Link>
       </div>
     </div>
   );
