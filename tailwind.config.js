@@ -13,16 +13,16 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-    colors: {
-      "adastra-dark-blue": "#01014b",
-      "adastra-light-blue" : "#0062f4",
-      "adastra-white" : "#e7ffff",
-      "adastra-purple" : "#d701f9"
-    },
+    // colors: {
+    //   "adastra-dark-blue": "#01014b",
+    //   "adastra-light-blue": "#0062f4",
+    //   "adastra-white": "#e7ffff",
+    //   "adastra-purple": "#d701f9",
+    // },
     fontFamily: {
-      "Logo" : "'Lemon', serif",
-      "Normal-Text": "'Teko', sans-serif"
-    }
+      montserrat: "'Montserrat', sans-serif",
+      bebas: "'Bebas Neue', sans-serif",
+    },
   },
   plugins: [],
 };
