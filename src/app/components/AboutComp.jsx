@@ -3,10 +3,10 @@ import React from "react";
 
 const AboutComp = () => {
   return (
-    <div className="flex justify-between items-center mx-[5vw] my-36 gap-3 ">
-      <div className="flex flex-col gap-2 justify-center items-center w-[60vw]">
-        <h3 className="text-4xl">What is Ad Astra?</h3>
-        <p className="text-lg uppercase font-thin text-center">
+    <div className="flex  flex-col-reverse lg:flex-row justify-between items-center mx-[5vw] my-36 gap-24  lg:gap-3 ">
+      <div className="flex flex-col gap-3 lg:gap-2 justify-center items-start lg:items-center lg:w-[60vw]">
+        <h3 className="text-3xl lg:text-4xl">What is Ad Astra?</h3>
+        <p className="text-md lg:text-lg uppercase font-thin text-left">
           This club is a community of passionate enthusiasts, coders, and
           programmers who share a common goal of fostering knowledge and
           empowering the community. We strive to lead events and provide
@@ -16,9 +16,6 @@ const AboutComp = () => {
           ABOUT US
         </button>
       </div>
-      {/* <div>
-        <Image width={500} height={0} src="/inaugration.jpg" className=""/>
-      </div> */}
 
       <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 border  p-5 bg-white bg-opacity-25">
         <div className="">
