@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,4 +15,23 @@ body {
   background-size: cover;
   font-family: "Montserrat", sans-serif;
   color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  background: transparent;
+  backdrop-filter: blur(10px);
+
+  /* background: linear-gradient( rgb(147, 51, 234),rgb(147, 45, 249)); */
 }
