@@ -9,10 +9,15 @@
 font-family: 'Montserrat', sans-serif; 
 */
 
+* {
+  scroll-behavior: smooth;
+}
 body {
   /* background: url("/background.jpg") no-repeat center center fixed; */
+  background-color: #1a1a1a;
   background: url("/background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
   color: white;
 }

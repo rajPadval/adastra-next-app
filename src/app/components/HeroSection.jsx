@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="flex justify-between items-center mx-[5vw]  my-40">
+    <section className="flex justify-between items-center mx-[5vw]  my-40 ">
       {/* main div */}
       <div className="flex flex-col select-none">
         <h1 className="flex  font-bebas items-baseline ">
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
       {/* extra text */}
       <div>
-        <Image width={250} height={0} src="/dotted-line.png" />
+        <Image width={250} height={0} src="/dotted-line.png" className="select-none"/>
       </div>
     </section>
   );
