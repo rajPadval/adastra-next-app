@@ -15,21 +15,25 @@ const ExtendedNav = ({ toggleNav, setToggleNav }) => {
           setToggleNav(false);
         }}
       />
+
       <div className="flex flex-col gap-8 ">
         <Link
           href="/"
+          onClick={() => setToggleNav(false)}
           className="list-none text-xl text-white  cursor-pointer lg:hidden block"
         >
           HOME
         </Link>
         <Link
           href="/pages/about"
+          onClick={() => setToggleNav(false)}
           className="list-none text-xl text-white  cursor-pointer lg:hidden block"
         >
           ABOUT
         </Link>
         <Link
-          href="/events"
+          href="/pages/events"
+          onClick={() => setToggleNav(false)}
           className="list-none text-xl text-white  cursor-pointer lg:hidden block"
         >
           EVENTS

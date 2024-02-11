@@ -24,7 +24,7 @@ const Navbar = () => {
           ABOUT
         </Link>
         <Link
-          href="/events"
+          href="/pages/events"
           className="list-none text-xl font-thin cursor-pointer hidden lg:block"
         >
           EVENTS
