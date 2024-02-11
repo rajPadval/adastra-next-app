@@ -1,41 +1,41 @@
 import React from "react";
 import Image from "next/image";
-import img1 from "/public/1.jpg";
-import img2 from "/public/2.jpg";
-import img3 from "/public/3.jpg";
-import img4 from "/public/4.jpg";
-import img5 from "/public/5.jpg";
-import img6 from "/public/6.jpg";
-import img7 from "/public/7.jpg";
+// import img1 from "/public/1.jpg";
+// import img2 from "/public/2.jpg";
+// import img3 from "/public/3.jpg";
+// import img4 from "/public/4.jpg";
+// import img5 from "/public/5.jpg";
+// import img6 from "/public/6.jpg";
+// import img7 from "/public/7.jpg";
 
 const collageData = [
   {
     id: 1,
-    src: img1,
+    src: "/1.jpg",
   },
   {
     id: 2,
-    src: img2,
+    src: "/2.jpg",
   },
   {
     id: 3,
-    src: img3,
+    src: "/3.jpg",
   },
   {
     id: 4,
-    src: img4,
+    src: "/4.jpg",
   },
   {
     id: 5,
-    src: img5,
+    src: "/5.jpg",
   },
   {
     id: 6,
-    src: img6,
+    src: "/6.jpg",
   },
   {
     id: 7,
-    src: img7,
+    src: "/7.jpg",
   },
 ];
 
@@ -52,7 +52,7 @@ const EventCollage = () => {
                 : ""
             }`}
           >
-            <Image src={item.src} alt="collage" className={``} />
+            <img src={item.src} alt="collage"  />
           </div>
         );
       })}
