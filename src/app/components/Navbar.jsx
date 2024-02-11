@@ -33,7 +33,6 @@ const Navbar = () => {
         className="text-3xl cursor-pointer block lg:hidden"
         onClick={() => {
           setToggleNav(true);
-          console.log(toggleNav);
         }}
       />
       <ExtendedNav toggleNav={toggleNav} setToggleNav={setToggleNav} />

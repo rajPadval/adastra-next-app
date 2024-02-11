@@ -12,7 +12,6 @@ const ExtendedNav = ({ toggleNav, setToggleNav }) => {
         className="text-3xl text-white cursor-pointer absolute top-5 right-4 lg:hidden"
         onClick={() => {
           setToggleNav(false);
-          console.log(toggleNav);
         }}
       />
       <div className="flex flex-col gap-8 ">
