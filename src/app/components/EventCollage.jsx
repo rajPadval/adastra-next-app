@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import img1 from "/public/collage/1.jpg";
-import img2 from "/public/collage/2.jpg";
-import img3 from "/public/collage/3.jpg";
-import img4 from "/public/collage/4.jpg";
-import img5 from "/public/collage/5.jpg";
-import img6 from "/public/collage/6.jpg";
-import img7 from "/public/collage/7.jpg";
+import img1 from "/public/1.jpg";
+import img2 from "/public/2.jpg";
+import img3 from "/public/3.jpg";
+import img4 from "/public/4.jpg";
+import img5 from "/public/5.jpg";
+import img6 from "/public/6.jpg";
+import img7 from "/public/7.jpg";
 
 const collageData = [
   {
