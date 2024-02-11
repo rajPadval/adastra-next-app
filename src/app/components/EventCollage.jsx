@@ -11,11 +11,11 @@ import Image from "next/image";
 const collageData = [
   {
     id: 1,
-    src: "/1.jpg",
+    src: "/1.JPG",
   },
   {
     id: 2,
-    src: "/2.jpg",
+    src: "/2.JPG",
   },
   {
     id: 3,
@@ -27,15 +27,15 @@ const collageData = [
   },
   {
     id: 5,
-    src: "/5.jpg",
+    src: "/5.JPG",
   },
   {
     id: 6,
-    src: "/6.jpg",
+    src: "/6.JPG",
   },
   {
     id: 7,
-    src: "/7.jpg",
+    src: "/7.JPG",
   },
 ];
 
