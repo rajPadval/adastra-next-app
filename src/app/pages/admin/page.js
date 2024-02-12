@@ -31,7 +31,9 @@ const Admin = () => {
             className="rounded-md px-3 py-2 text-xs lg:w-[20vw] text-gray-500 outline-none"
           />
         </div>
-        <span className="text-[0.5rem] font-thin">FORGOT PASSWORD?</span>
+        <span className="text-[0.5rem] font-thin cursor-pointer hover:underline">
+          FORGOT PASSWORD?
+        </span>
         <button className="bg-[#0F1B27] text-xs py-2 rounded-md font-thin outline-none">
           SIGN IN
         </button>

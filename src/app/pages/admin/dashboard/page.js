@@ -1,7 +1,8 @@
 import React from "react";
+import CreateEvent from "./components/CreateEvent";
 
 const Dashboard = () => {
-  return <div className="w-full h-screen">Dashboard</div>;
+  return <CreateEvent/>;
 };
 
 export default Dashboard;

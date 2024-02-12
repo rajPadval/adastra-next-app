@@ -19,7 +19,6 @@ import AdminNavbar from "./pages/admin/dashboard/components/AdminNavbar";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <Provider store={store}>
