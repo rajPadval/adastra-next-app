@@ -14,16 +14,21 @@ import store from "@/redux/store";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
 import ConnectWithUs from "./components/ConnectWithUs";
+import { usePathname } from "next/navigation";
+import AdminNavbar from "./pages/admin/dashboard/components/AdminNavbar";
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  console.log(pathname);
+
   return (
     <Provider store={store}>
       <html lang="en">
         <body className={inter.className}>
-          <Navbar />
+          {pathname === "/pages/admin/dashboard" ? <AdminNavbar /> : <Navbar />}
           <Toaster />
           {children}
-          <ConnectWithUs />
+          {pathname !== "/pages/admin/dashboard" && <ConnectWithUs />}
         </body>
       </html>
     </Provider>

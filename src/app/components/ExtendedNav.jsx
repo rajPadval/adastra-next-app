@@ -38,6 +38,13 @@ const ExtendedNav = ({ toggleNav, setToggleNav }) => {
         >
           EVENTS
         </Link>
+        <Link
+          href="/pages/blogs"
+          onClick={() => setToggleNav(false)}
+          className="list-none text-xl text-white  cursor-pointer lg:hidden block"
+        >
+          BLOGS
+        </Link>
       </div>
     </div>
   );

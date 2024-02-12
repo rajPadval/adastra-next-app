@@ -29,6 +29,12 @@ const Navbar = () => {
         >
           EVENTS
         </Link>
+        <Link
+          href="/pages/blogs"
+          className="list-none text-xl font-thin cursor-pointer hidden lg:block"
+        >
+          BLOGS
+        </Link>
       </div>
       <span className="font-bebas  flex justify-center items-center gap-3">
         <Image
