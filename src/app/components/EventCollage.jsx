@@ -11,31 +11,31 @@ import Image from "next/image";
 const collageData = [
   {
     id: 1,
-    src: "/1.JPG",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844239/Ad-Astra%20Web%20Assets/1-min_tmuapo.jpg",
   },
   {
     id: 2,
-    src: "/2.JPG",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844244/Ad-Astra%20Web%20Assets/2-min_irtfca.jpg",
   },
   {
     id: 3,
-    src: "/3.jpg",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844242/Ad-Astra%20Web%20Assets/3-min_suc8xt.jpg",
   },
   {
     id: 4,
-    src: "/4.jpg",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844236/Ad-Astra%20Web%20Assets/4-min_aixjpz.jpg",
   },
   {
     id: 5,
-    src: "/5.JPG",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844239/Ad-Astra%20Web%20Assets/5-min_rotayq.jpg",
   },
   {
     id: 6,
-    src: "/6.JPG",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844242/Ad-Astra%20Web%20Assets/6-min_zqc9eb.jpg",
   },
   {
     id: 7,
-    src: "/7.JPG",
+    src: "https://res.cloudinary.com/dkygcoyhb/image/upload/v1707844056/Ad-Astra%20Web%20Assets/7_1_whg5rx.jpg",
   },
 ];
 
