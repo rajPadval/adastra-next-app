@@ -5,7 +5,8 @@ import { connectDb } from "@/server/connection";
 connectDb();
 
 export const POST = async (request) => {
-  const { title, content, category, creator, linkedin } = await request.json();
+  const { title, content, category, creator, linkedin, thumbnail } =
+    await request.json();
 
   try {
     let blogpost = await Blogpost.create({
@@ -14,6 +15,7 @@ export const POST = async (request) => {
       category,
       creator,
       linkedin,
+      thumbnail,
     });
     await blogpost.save();
 

@@ -1,53 +1,57 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import JoditEditor from "jodit-react";
 import toast from "react-hot-toast";
 import { MdDelete } from "react-icons/md";
+import dynamic from "next/dynamic";
+import { uploadImg } from "@/app/helpers";
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 const CreateBlog = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     getPosts();
-  }, [posts]);
+  }, []);
 
-  const editor = useRef(null);
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [creator, setCreator] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [category, setCategory] = useState("Technical");
+  const [thumbnail, setThumbnail] = useState();
 
   // function to create post
   const createPost = async () => {
-    const data = { title, content, category, creator, linkedin };
+    const data = { title, content, category, creator, linkedin, thumbnail };
     if (title.length < 3) {
-      await toast.error("Please enter a valid title");
+      toast.error("Please enter a valid title");
     } else {
       if (content.length < 100) {
-        await toast.error("Content should be more than 100 words");
+        toast.error("Content should be more than 100 words");
       } else {
         if (!category) {
-          await toast.error("Please reselect the category");
+          toast.error("Please reselect the category");
         } else {
-          // const res = await fetch(
-          //   "http://localhost:8000/api/createblogpost",
-          const res = await fetch(
-            "https://adastra-backend.vercel.app/api/createblogpost",
-            {
+          const imageUrl = await uploadImg(thumbnail);
+
+          if (imageUrl) {
+            data.thumbnail = imageUrl;
+            const res = await fetch("/api/blog/create", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(data),
-            }
-          );
-          await res.json();
-          await toast.success("Blog created sucessfully");
-          await setTitle("");
-          await setContent("");
-          await setCategory("");
-          await setLinkedin("");
-          await setCreator("");
+            });
+            await res.json();
+            toast.success("Blog created sucessfully");
+            setTitle("");
+            setContent("");
+            setCategory("");
+            setLinkedin("");
+            setCreator("");
+          } else {
+            toast.error("Error uploding image");
+          }
         }
       }
     }
@@ -69,7 +73,7 @@ const CreateBlog = () => {
     );
     // const res = await fetch("http://localhost:8000/api/getblogpost");
     const data = await res.json();
-    await setPosts(data);
+    setPosts(data);
   };
 
   const deletePost = async (postId) => {
@@ -82,7 +86,24 @@ const CreateBlog = () => {
       }
     );
     await res.json();
-    await toast.success("post removed");
+    toast.success("post removed");
+  };
+
+  const editor = useRef(null);
+
+  const handleSelectImage = async (e) => {
+    const file = e.target.files[0];
+    const fileSize = file.size / 1024 / 1024;
+    if (fileSize <= 1) {
+      console.log(
+        "The size of the file is : ",
+        fileSize,
+        "MB which is less than or equal to 1"
+      );
+      setThumbnail(file);
+    } else {
+      toast.error("File size is more than 1 Mb");
+    }
   };
 
   return (
@@ -112,11 +133,21 @@ const CreateBlog = () => {
             <JoditEditor
               ref={editor}
               value={content}
-              tabIndex={1} // tabIndex of textarea
               onChange={(newContent) => {
                 setContent(newContent);
               }}
               className="text-gray-600"
+            />
+          </div>
+          <div className="flex flex-col gap-3 items-start">
+            <label htmlFor="thumbnail" className="font-thin text-lg md:text-xl">
+              Thumbnail :
+            </label>
+            <input
+              type="file"
+              name="thumbnail"
+              id="thubmanil"
+              onChange={handleSelectImage}
             />
           </div>
           <div className="flex flex-col gap-3 items-start">
@@ -136,6 +167,7 @@ const CreateBlog = () => {
               </select>
             </label>
           </div>
+
           <div className="flex flex-col gap-3 items-start">
             <label className=" text-lg  md:text-xl font-thin">
               Creator's Name :

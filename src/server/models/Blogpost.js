@@ -10,6 +10,7 @@ const BlogPostSchema = new mongoose.Schema(
       default: "Adastra",
     },
     linkedin: String,
+    thumbnail : String
   },
   { timestamps: true }
 );
