@@ -21,11 +21,8 @@ export const POST = async (request) => {
 
     const encryptedPassword = await bcrypt.hash(password, 10);
 
-    user = await Register.create({
-      fName,
-      lName,
+    user = await Admin.create({
       email: email.toLowerCase(),
-      phone,
       password: encryptedPassword,
     });
 
