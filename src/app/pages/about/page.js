@@ -69,8 +69,11 @@ const About = () => {
       </div>
 
       {/* more paragraph */}
-      <p className="text-md lg:text-lg uppercase font-thin text-start lg:text-center mx-[5vw] mt-10 mb-24" data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom">
+      <p
+        className="text-md lg:text-lg uppercase font-thin text-start lg:text-center mx-[5vw] mt-10 mb-24"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         If you are considering joining us, do not hesitate any longer. Anyone
         interested in expanding their network, joining a great team, and having
         a better experience while learning should come here! All we ask is that

@@ -12,7 +12,7 @@ const BlogComp = ({ title, thumbnail, _id }) => {
         height={300}
         className="w-[300px] h-[250px] object-center rounded-md "
       />
-      <h3 className="font-bebas text-2xl text-center">{title}</h3>
+      <h3 className="font-bebas text-2xl text-center">{title.length > 28 ?  title.slice(0,28) + "..." : title}</h3>
       <Link
         href={`/pages/blogs/${_id}`}
         className="bg-white bg-opacity-60 w-full text-lg font-montserrat rounded-md py-1 text-black hover:bg-opacity-100 transition-all duration-300 ease-in-out text-center"
