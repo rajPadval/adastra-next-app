@@ -2,6 +2,7 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import BlogComp from "@/app/components/BlogComp";
+import { SyncLoader } from "react-spinners";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -27,11 +28,18 @@ const Blogs = () => {
           Blogs that make to stick to the real world updates.
         </p>
       </div>
-      <div className="text-white grid  lg:grid-cols-3 gap-16 justify-center items-center my-28  mx-auto lg:w-[60vw]">
-        {blogs.map((blog, i) => {
-          return <BlogComp key={blog._id} {...blog} />;
-        })}
-      </div>
+
+      {blogs[0]?.title.length === 0 || blogs[0]?.title.length === undefined ? (
+        <div className="w-[100vw] h-[50vh] flex justify-center items-center">
+          <SyncLoader color="#ffffff" />
+        </div>
+      ) : (
+        <div className="text-white grid  lg:grid-cols-3 gap-16 justify-center items-center my-28  mx-auto lg:w-[60vw]">
+          {blogs.map((blog, i) => {
+            return <BlogComp key={blog._id} {...blog} />;
+          })}
+        </div>
+      )}
     </section>
   );
 };

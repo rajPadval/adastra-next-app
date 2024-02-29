@@ -2,6 +2,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import axios from "axios";
 import EventComp from "@/app/components/EventComp";
+import { SyncLoader } from "react-spinners";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -26,11 +27,19 @@ const Events = () => {
            Events that bridge the gap between learning and doing.
         </p>
       </div>
-      <div className="text-white flex flex-col gap-16 justify-center items-center  my-28">
-        {events.map((event, i) => {
-          return <EventComp key={i} {...event} />;
-        })}
-      </div>
+
+      {events[0]?.title.length === 0 ||
+      events[0]?.title.length === undefined ? (
+        <div className="w-[100vw] h-[50vh] flex justify-center items-center">
+          <SyncLoader color="#ffffff" />
+        </div>
+      ) : (
+        <div className="text-white flex flex-col gap-16 justify-center items-center  my-28">
+          {events.map((event, i) => {
+            return <EventComp key={i} {...event} />;
+          })}
+        </div>
+      )}
     </section>
   );
 };
