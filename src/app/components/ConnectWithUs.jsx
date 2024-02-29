@@ -14,7 +14,7 @@ const ConnectWithUs = () => {
           <FaLinkedin className="cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out" />
         </a>
         <a
-          href="https://www.linkedin.com/company/adastraofficial/"
+          href="https://twitter.com/_ad_astra_x?t=8HZrqMU9ahvroxm-T4NNJg&s=08"
           target="_blank"
         >
           <FaXTwitter className="cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out" />
