@@ -10,7 +10,6 @@ const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
 
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <nav className="flex justify-between lg:justify-end items-center backdrop-blur-sm py-4 px-4 gap-16 shadow-md bg-white bg-opacity-5 fixed top-0 right-0 left-0 z-20">

@@ -12,6 +12,7 @@ const HeroSection = () => {
           </span>
           <Image
             src="/logo.png"
+            alt="adastra logo"
             width={200}
             height={0}
             className="w-[20vw] lg:w-[13vw] lg:h-[30vh] animate-bounce"
@@ -35,6 +36,8 @@ const HeroSection = () => {
           width={250}
           height={0}
           src="/dotted-line.png"
+          alt="dotted-line"
+          priority
           className="select-none"
         />
       </div>
