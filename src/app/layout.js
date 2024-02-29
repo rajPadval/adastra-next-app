@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
     <Provider store={store}>
       <html lang="en">
         <head>
-          <link rel="icon" href="/logo.png" />
+          <link rel="icon" href="/logo.png" type="image/png"/>
           <title>Ad Astra Student's Club</title>
           <meta property="og:title" content="Ad Astra" />
           <meta
