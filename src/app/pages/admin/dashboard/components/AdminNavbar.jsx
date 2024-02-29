@@ -1,14 +1,31 @@
 "use client";
-import React from "react";
+import React, { useCallback } from "react";
 import { MdEventAvailable } from "react-icons/md";
 import { BsJournalText } from "react-icons/bs";
 import { FaUsersCog } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setTab } from "@/redux/slices/navSlice";
+import { HiOutlineLogout } from "react-icons/hi";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const AdminNavbar = () => {
   const dispatch = useDispatch();
   const tab = useSelector((state) => state.nav.tab);
+
+  const router = useRouter();
+
+  const handleLogout = useCallback(async () => {
+    const res = await axios.get("/api/auth/logout");
+    const data = await res.data;
+    if (data.success) {
+      toast.success(data.message);
+      router.push("/pages/admin");
+    } else {
+      toast.error(data.message);
+    }
+  }, []);
 
   return (
     <div className="w-[75vw] lg:w-fit mx-auto h-fit lg:h-full flex  lg:flex-col gap-8 justify-center items-center fixed lg:top-0 left-0 right-0 lg:right-full  bottom-5  backdrop-blur-2xl  rounded-lg px-5 py-2 border lg:border-none border-r-zinc-600 bg-white bg-opacity-5 z-30">
@@ -37,6 +54,13 @@ const AdminNavbar = () => {
           }`}
           title="Members"
           onClick={() => dispatch(setTab("ManageMembers"))}
+        />
+      </div>
+      <div>
+        <HiOutlineLogout
+          onClick={handleLogout}
+          className="text-3xl lg:text-4xl hover:scale-125 transition-all ease-in-out duration-300 cursor-pointer hover:text-red-500 "
+          title="Logout"
         />
       </div>
     </div>

@@ -16,9 +16,15 @@ import Navbar from "./components/Navbar";
 import ConnectWithUs from "./components/ConnectWithUs";
 import { usePathname } from "next/navigation";
 import AdminNavbar from "./pages/admin/dashboard/components/AdminNavbar";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export default function RootLayout({ children }) {
   const pathname = usePathname();
+
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  },[])
 
   return (
     <Provider store={store}>

@@ -20,6 +20,7 @@ body {
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -40,3 +41,5 @@ body {
 
   /* background: linear-gradient( rgb(147, 51, 234),rgb(147, 45, 249)); */
 }
+
+

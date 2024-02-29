@@ -41,7 +41,7 @@ const collageData = [
 
 const EventCollage = () => {
   return (
-    <div className="grid grid-cols-3 auto-rows-[50px] lg:auto-rows-[100px]  p-3 gap-3 justify-center items-center  rounded-lg w-fit h-fit  backdrop-blur-sm  mx-auto ">
+    <div className="grid grid-cols-3 auto-rows-[50px] lg:auto-rows-[100px]  p-3 gap-3 justify-center items-center  rounded-lg w-fit h-fit  backdrop-blur-sm  mx-auto "data-aos="zoom-in-up">
       {collageData.map((item, i) => {
         return (
           <div
@@ -52,7 +52,7 @@ const EventCollage = () => {
                 : ""
             }`}
           >
-            <img src={item.src} alt="collage"  />
+            <img src={item.src} alt="collage" />
           </div>
         );
       })}

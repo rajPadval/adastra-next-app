@@ -4,7 +4,7 @@ import React from "react";
 const AboutComp = () => {
   return (
     <div className="flex  flex-col-reverse lg:flex-row justify-between items-center mx-[5vw] my-36 gap-24  lg:gap-3 ">
-      <div className="flex flex-col gap-3 lg:gap-2 justify-center items-start lg:items-center lg:w-[60vw]">
+      <div className="flex flex-col gap-3 lg:gap-2 justify-center items-start lg:items-center lg:w-[60vw]" data-aos="zoom-out-right">
         <h3 className="text-3xl lg:text-4xl">What is Ad Astra?</h3>
         <p className="text-md lg:text-lg uppercase font-thin text-left">
           This club is a community of passionate enthusiasts, coders, and
@@ -17,7 +17,7 @@ const AboutComp = () => {
         </button>
       </div>
 
-      <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 border  p-5 bg-white bg-opacity-25">
+      <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 border  p-5 bg-white bg-opacity-25 " data-aos="zoom-out-left">
         <div className="">
           <Image
             className="h-[200px] object-cover transition-transform duration-500 group-hover:scale-125 rounded-lg"
@@ -37,7 +37,7 @@ const AboutComp = () => {
           <a
             href="/"
             target={"_blank"}
-            className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white font-bold shadow shadow-black/60"
+            className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white font-semibold font-montserrat  shadow shadow-black/60"
           >
             SEE MORE
           </a>

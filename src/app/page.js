@@ -7,12 +7,12 @@ import MoreAbout from "./components/MoreAbout";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-clip">
       <HeroSection />
       <DotComp />
       <AboutComp />
       <MoreAbout />
-    </>
+    </div>
   );
 };
 
