@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
                 //         value: "#0d47a1",
                 //     },
                 // },
-                fpsLimit: 120,
+                fpsLimit: 60,
                 interactivity: {
                   events: {
                     onClick: {
@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
                     value: 30,
                   },
                   opacity: {
-                    value: 0.5,
+                    value: 0.09,
                   },
                   shape: {
                     type: "circle",
