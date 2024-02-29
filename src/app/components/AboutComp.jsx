@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link"
 
 const AboutComp = () => {
   return (
@@ -12,9 +13,9 @@ const AboutComp = () => {
           empowering the community. We strive to lead events and provide
           opportunities.
         </p>
-        <button className="px-5 py-2 bg-white text-black bg-opacity-25">
+        <Link href="/pages/about" className="px-5 py-2 bg-white text-black bg-opacity-25 hover:bg-opacity-100 transition-all ease-in-out duration-500">
           ABOUT US
-        </button>
+        </Link>
       </div>
 
       <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 border  p-5 bg-white bg-opacity-25 " data-aos="zoom-out-left">
