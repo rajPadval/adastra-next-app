@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
           <Toaster />
           {children}
           {pathname !== "/pages/admin/dashboard" && <ConnectWithUs />}
-          {!pathname === "/pages/admin/dashboard" && (
+          {pathname !=="/pages/admin/dashboard" && (
             <Particles
               id="tsparticles"
               init={particlesInit}
